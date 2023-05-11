@@ -3,15 +3,18 @@ import css from "./feedback.module.css";
 import PropTypes from "prop-types";
 
 export class FeedbackOptions extends Component {
+    handleVote = (ev) => {
+        this.props.handleVote(ev.target.name)
+    }
     render() {
         return (
-            <button onClick={this.props.onLeaveFeedback} className={css.feedbackButton}>{this.props.options}</button>
+            <button onClick={this.handleVote} name={this.props.options} className={css.feedbackButton}>{this.props.options}</button>
         )
     }
 }
 
 FeedbackOptions.propTypes = {
-    onLeaveFeedback: PropTypes.func.isRequired,
+    handleVote: PropTypes.func.isRequired,
     options: PropTypes.string.isRequired
 }
 

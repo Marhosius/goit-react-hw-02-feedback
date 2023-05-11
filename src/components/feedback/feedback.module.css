@@ -1,7 +1,10 @@
-.feedback {
-    width: 1200px;
+.INeedAWrapperNow {
     margin-right: auto;
     margin-left: auto;
+}
+
+.feedback {
+    width: 1200px;
     padding: 40px;
     display: flex;
     flex-direction: column;
